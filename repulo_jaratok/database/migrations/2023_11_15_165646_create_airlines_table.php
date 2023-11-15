@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Airline;
+use Database\Factories\AirlineFactory;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,6 +19,9 @@ return new class extends Migration
             $table->string('country');
             $table->timestamps();
         });
+
+
+        Airline::create(['name' =>'Gizi', 'country'=>'Anglia']);
     }
 
     
